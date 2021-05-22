@@ -1,3 +1,6 @@
+#Author : Vimaljith k
+#This program is for matrix addition
+
 matrix1 = []
 r = int(input('enter num of rows: '))
 c = int(input('enter num of column: '))
