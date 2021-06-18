@@ -55,17 +55,10 @@ class Matrices:
             print()
 
     def menu(self, k):
-        if k == 0:
 
-            return mat.add(r, c)
-
-        elif k == 1:
-
-            return mat.mult(r1, c1, c2)
 
 
 mat = Matrices()
-print(mat.readMatrix.__doc__)
 condition = True
 
 while condition:
