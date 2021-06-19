@@ -1,21 +1,32 @@
 
 class Matrices:
-
-    def operation(self):
+    def menu(self):
         '''
 
-        This function takes an option from user and perform the matrix operation
+        This function takes an option from user
+        1 for addition
+        2 for multiplication
+        3 for quit
+
+        '''
+        option = input('''
+
+            1: Addition
+            2: Multiplication
+            3. Quit
+
+            make a selection from 1, 2, 3:
+                        ''')
+        mat.operation(option)
+
+    def operation(self, option):
+        '''
+
+        This function perform the matrix operation as per the option
 
         '''
 
         while True:
-            option = input('''
-            
-                1: Addition
-                2: Multiplication
-
-                make a selection from 1, 2:
-                            ''')
 
             if option == "1":
                 print('addition')
@@ -24,6 +35,7 @@ class Matrices:
 
                 sumResult = mat.add(r, c)
                 mat.printMatrix(sumResult)
+
 
             elif option == "2":
                 print('multiplication')
@@ -34,9 +46,15 @@ class Matrices:
                 multResult = mat.mult(r1, c1, c2)
                 mat.printMatrix(multResult)
 
-            else:
-                print('exit')
+
+            elif option == "3":
+                print('Quit')
                 break
+
+            else:
+                print('Invalid option selected')
+                break
+            mat.menu()
 
     def readMatrix(self, r, c):
         '''
@@ -124,7 +142,7 @@ class Matrices:
             print()
 
 mat = Matrices()
-mat.operation()
+mat.menu()
 
 
 
